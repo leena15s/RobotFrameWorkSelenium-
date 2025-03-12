@@ -1,6 +1,9 @@
 *** Settings ***
 Library  SeleniumLibrary
 Library    CSVLibrary
+Library    OperatingSystem
+Library    Collections
+
 Resource    locator.robot
 Resource    Pages/LoginPage.robot
 Resource    Pages/HomePage.robot

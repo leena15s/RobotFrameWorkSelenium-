@@ -10,7 +10,7 @@ Enter valid credentials
     Wait And Click    ${login-button}
 
 Verify login success
-    Wait Until Page Contains Element    ${logout_btn}
+    Wait And Click       ${logout_btn}    6s
 
 Login with csv DDT
    [Arguments]    ${username}    ${password}
@@ -22,10 +22,12 @@ Login with csv DDT
 Login With Multiple Users From CSV (DDT)
    ${data}    Read Csv File To List       ${CSV_}
    FOR    ${row}    IN    @{data}
-        ${username}    ${password}    Set Variable    ${row}[0]    ${row}[1]
+        ${username}    ${password}    Set Variable    ${row}    ${row}
         Log    Logging in with ${username} and ${password}
         Wait And Input Text    ${email_login}      ${username}
         Wait And Input Text    ${password_login}       ${password}
-        Wait And Click    ${login-button}
+        Wait And Click    ${login-button}    5s
    END
-   Verify Login Success
+
+
+   

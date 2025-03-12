@@ -5,6 +5,7 @@ Resource    Resource/Resource.robot
 Suite Setup    Open Website Homepage
 Suite Teardown    Close Browser
 
+
 *** Test Cases ***
 
 TC01 Verify login success
@@ -13,11 +14,11 @@ TC01 Verify login success
     Enter valid credentials
     Verify login success
 
-
 TC02 Login Test with DDT
 #    Open Website Homepage
     Navigate To Login Page
     Login With Multiple Users From CSV (DDT)
+    Verify login success
 
 TC03 END TO END
     TC01 Verify login success

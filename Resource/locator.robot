@@ -15,10 +15,12 @@ ${valid_email}       john.doe@automation.com
 ${password_login}     //input[@data-qa="login-password"]
 ${valid_password}       SecurePassword123
 ${login-button}           //button[@data-qa="login-button"]
-${logout_btn}            //a[@href="/logout"]
+${logout_btn}            //i[@class='fa fa-lock']
+
+
 
 # DDT
-${CSV_}    TestData/UsersForLogin.csv
+${CSV_}    Data/UsersForLogin.csv
 ${error_msg}    //p[text()='Your email or password is incorrect!']
 
 # product page to end
