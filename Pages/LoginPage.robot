@@ -1,5 +1,6 @@
 *** Settings ***
 Resource    Resource/Resource.robot
+Library    OperatingSystem
 
 
 *** Keywords ***
@@ -11,7 +12,6 @@ Enter valid credentials
 
 Verify login success
     Wait And Click       ${logout_btn}    6s
-
 Login with csv DDT
    [Arguments]    ${username}    ${password}
     Wait And Input Text    ${username}
@@ -20,14 +20,12 @@ Login with csv DDT
 
 
 Login With Multiple Users From CSV (DDT)
+   Sleep    2s
    ${data}    Read Csv File To List       ${CSV_}
    FOR    ${row}    IN    @{data}
-        ${username}    ${password}    Set Variable    ${row}    ${row}
+        ${username}    ${password}    Set Variable     ${row}[0]   ${row}[1]
         Log    Logging in with ${username} and ${password}
         Wait And Input Text    ${email_login}      ${username}
         Wait And Input Text    ${password_login}       ${password}
-        Wait And Click    ${login-button}    5s
+        Wait And Click    ${login-button}
    END
-
-
-   

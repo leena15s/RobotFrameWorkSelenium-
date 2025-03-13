@@ -31,9 +31,8 @@ Continues to checkout
     Sleep    3s
 
 
-TC01 Verify login success
-    Open Website Homepage
-    Navigate To Login Page
+login success
+#    Navigate To Login Page  --> hide for test suite only
     Enter valid credentials
-    Verify login success
+
 

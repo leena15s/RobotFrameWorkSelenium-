@@ -1,8 +1,4 @@
-# username,password
-# john.doe@automa.com,WrongPass
-# invalid.user2@automa.com,12345Looo
-# john.doe@automation.com,SecurePassword123
-#
-[{'username': 'john.doe@automa.com', 'password': 'WrongPass'},
- {'username': 'invalid.user2@automa.com', 'password': '12345'},
- {'username': 'john.doe@automation.com', 'password': 'SecurePassword123'}]
+john.doe@automa.com,Loneidjdkj33
+john.doe@automa.com,WrongPass
+invalid.user2@automa.com,12345Looo
+john.doe@automation.com,SecurePassword123
