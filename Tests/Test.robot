@@ -27,5 +27,5 @@ TC03 END TO END
     Sleep    3s
     Continues to checkout
     Sleep    3s
-    Close Browser
+    
 
