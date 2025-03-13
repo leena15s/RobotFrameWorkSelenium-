@@ -1,6 +1,6 @@
 *** Settings ***
 Resource    Resource/Resource.robot
-Library    OperatingSystem
+
 
 
 *** Keywords ***
@@ -12,6 +12,8 @@ Enter valid credentials
 
 Verify login success
     Wait And Click       ${logout_btn}    6s
+    Sleep    3s
+
 Login with csv DDT
    [Arguments]    ${username}    ${password}
     Wait And Input Text    ${username}
